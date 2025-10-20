@@ -2,57 +2,63 @@
 // 1. CÓDIGO DE LOGIN (Execute APENAS se o elemento existir)
 // ==========================================================
 
-const loginForm = document.getElementById("loginForm");
+// Arquivo: js/main.js
 
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
 
-    const email = document.getElementById("email").value.trim();
-    const senha = document.getElementById("senha").value.trim();
+  if (loginForm) {
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault(); // Impede o envio tradicional do formulário (recarregamento)
 
-    if (email === "" || senha === "") {
-      if (typeof Swal !== "undefined") {
-        Swal.fire({
-          icon: "warning",
-          title: "Campos obrigatórios",
-          text: "Por favor, preencha todos os campos antes de continuar.",
-          confirmButtonColor: "#1ABC9C",
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      // Cria um FormData para enviar os dados como POST
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("senha", senha);
+
+      try {
+        // Requisição AJAX para o script PHP de processamento
+        const response = await fetch("php/login_process.php", {
+          method: "POST",
+          body: formData, // Envia os dados
         });
-      } else {
-        alert("Por favor, preencha todos os campos antes de continuar.");
-      }
-      return;
-    }
 
-    if (email === "admin@healthguard.com" && senha === "1234") {
-      if (typeof Swal !== "undefined") {
-        Swal.fire({
-          icon: "success",
-          title: "Login bem-sucedido!",
-          text: "Bem-vindo ao sistema HealthGuard!",
-          confirmButtonColor: "#1ABC9C",
-        }).then(() => {
-          window.location.href = "php/dashboard.php";
-        });
-      } else {
-        window.location.href = "php/dashboard.php";
-      }
-    } else {
-      if (typeof Swal !== "undefined") {
+        const data = await response.json();
+
+        if (data.success) {
+          // Login BEM-SUCEDIDO
+          Swal.fire({
+            icon: "success",
+            title: "Sucesso!",
+            text: data.message,
+            timer: 1500,
+            showConfirmButton: false,
+          }).then(() => {
+            // Redireciona para o dashboard após o sucesso
+            window.location.href = "php/dashboard.php";
+          });
+        } else {
+          // Login FALHOU
+          Swal.fire({
+            icon: "error",
+            title: "Erro de Login",
+            text: data.message,
+          });
+        }
+      } catch (error) {
+        console.error("Erro na requisição AJAX:", error);
         Swal.fire({
           icon: "error",
-          title: "Credenciais inválidas",
-          text: "Email ou senha incorretos. Tente novamente.",
-          confirmButtonColor: "#1ABC9C",
+          title: "Erro de Conexão",
+          text: "Não foi possível conectar ao servidor. Tente novamente.",
         });
-      } else {
-        alert("Email ou senha incorretos. Tente novamente.");
       }
-    }
-  });
-}
-
+    });
+  }
+});
 // ==========================================================
 // 2. CÓDIGO DE RECUPERAÇÃO DE SENHA (Execute APENAS se os elementos existirem)
 // ==========================================================

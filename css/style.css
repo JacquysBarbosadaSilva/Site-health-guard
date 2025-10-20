@@ -1,850 +1,1396 @@
 /* ===== Estilo geral ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
-    --primary-color: #1a7a6a;
-    --secondary-color: #1ABC9C;
-    --bg-color-main: #f8f9fa;
-    --text-color: #333;
-    --sidebar-width: 280px;
-    --transition-speed: 0.3s;
-    --card-bg: #fff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --primary-color: #1a7a6a;
+  --secondary-color: #1abc9c;
+  --bg-color-main: #f8f9fa;
+  --text-color: #333;
+  --sidebar-width: 280px;
+  --transition-speed: 0.3s;
+  --card-bg: #fff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-*{
-    padding: 0;
-    font-family: 'Kantumruy Pro', sans-serif;
-    margin: 0;
+* {
+  padding: 0;
+  font-family: "Kantumruy Pro", sans-serif;
+  margin: 0;
 }
 
 .login-page {
-    font-family: 'Poppins', sans-serif;
-    background-color: #7fa88b; /* fundo verde */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #7fa88b; /* fundo verde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* ===== CARD BRANCO ===== */
 .login-card {
-    background-color: #ffffff; /* card branco */
-    border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    padding: 60px 70px;
-    width: 400px;
-    text-align: center;
+  background-color: #ffffff; /* card branco */
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  padding: 60px 70px;
+  width: 400px;
+  text-align: center;
 }
 
 /* ===== LOGO ===== */
 .logo h1 {
-    color: #2e5d44;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #2e5d44;
-    display: inline-block;
-    padding-bottom: 4px;
+  color: #2e5d44;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #2e5d44;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 /* ===== TÍTULO ===== */
 h2 {
-    color: #2e5d44;
-    font-size: 22px;
-    margin-bottom: 30px;
+  color: #2e5d44;
+  font-size: 22px;
+  margin-bottom: 30px;
 }
 
 /* ===== FORMULÁRIO ===== */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    align-self: flex-start;
-    color: #2e5d44;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: 5px;
+  align-self: flex-start;
+  color: #2e5d44;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 input {
-    width: 100%;
-    padding: 12px;
-    border: 1.5px solid #b8d4c1;
-    border-radius: 8px;
-    background-color: #f4faf6;
-    color: #1b3a29;
-    font-size: 15px;
-    outline: none;
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #b8d4c1;
+  border-radius: 8px;
+  background-color: #f4faf6;
+  color: #1b3a29;
+  font-size: 15px;
+  outline: none;
 }
 
 input::placeholder {
-    color: #5b7d6b;
+  color: #5b7d6b;
 }
 
 /* ===== BOTÃO ===== */
 .button-login {
-    margin-top: 30px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2e5d44;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e5d44;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .button-login:hover {
-    background-color: #244a36;
+  background-color: #244a36;
 }
 
 /* ===== LINK ===== */
 .esqueceu {
-    display: block;
-    margin-top: 15px;
-    font-size: 14px;
-    color: #224d35;
-    text-decoration: underline;
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #224d35;
+  text-decoration: underline;
 }
 
 .esqueceu:hover {
-    color: #1a3c28;
+  color: #1a3c28;
 }
 
 /* Esqueceu Senha */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .rd-page {
-    font-family: 'Poppins', sans-serif;
-    background-color: #7fa88b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #7fa88b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .rd-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .rd-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    padding: 50px 70px;
-    width: 420px;
-    text-align: center;
-    position: relative;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  padding: 50px 70px;
+  width: 420px;
+  text-align: center;
+  position: relative;
 }
 
 /* ===== LOGO ===== */
 .rd-logo {
-    color: #2e5d44;
-    font-size: 32px;
-    font-weight: 700;
-    border-bottom: 2px solid #2e5d44;
-    display: inline-block;
-    padding-bottom: 4px;
-    margin-bottom: 40px;
+  color: #2e5d44;
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 2px solid #2e5d44;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 40px;
 }
 
 /* ===== ETAPAS ===== */
 .step {
-    display: none;
+  display: none;
 }
 .step.active {
-    display: block;
-    animation: fadeIn 0.4s ease;
+  display: block;
+  animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== TÍTULOS ===== */
 h2 {
-    color: #2e5d44;
-    font-size: 22px;
-    margin-bottom: 25px;
+  color: #2e5d44;
+  font-size: 22px;
+  margin-bottom: 25px;
 }
 
 /* ===== INPUTS ===== */
 label {
-    display: block;
-    text-align: left;
-    color: #2e5d44;
-    font-weight: 600;
-    margin-top: 10px;
+  display: block;
+  text-align: left;
+  color: #2e5d44;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 input {
-    width: 100%;
-    padding: 12px;
-    border: 1.5px solid #b8d4c1;
-    border-radius: 8px;
-    background-color: #f4faf6;
-    color: #1b3a29;
-    font-size: 15px;
-    margin-top: 5px;
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #b8d4c1;
+  border-radius: 8px;
+  background-color: #f4faf6;
+  color: #1b3a29;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 input::placeholder {
-    color: #5b7d6b;
+  color: #5b7d6b;
 }
 
 /* ===== TEXTO INFORMATIVO ===== */
 .info {
-    color: #3a5c49;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 25px;
+  color: #3a5c49;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 /* ===== BOTÃO ===== */
 button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2e5d44;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e5d44;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #244a36;
+  background-color: #244a36;
 }
 
 /* ===== VOLTAR ===== */
 .voltar {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 14px;
-    color: #224d35;
-    cursor: pointer;
-    text-decoration: underline;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #224d35;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .voltar:hover {
-    color: #1a3c28;
+  color: #1a3c28;
 }
-
 
 /* Side Bar */
-.logo-sidebar{
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
+.logo-sidebar {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
-.sd-page{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color-main);
-    display: flex;
-    min-height: 100vh;
+.sd-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-main);
+  display: flex;
+  min-height: 100vh;
 }
 
 .sidebar {
-    width: var(--sidebar-width);
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000;
-    /* Transição para movimento suave */
-    transition: transform var(--transition-speed) ease, width var(--transition-speed) ease;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  width: var(--sidebar-width);
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  /* Transição para movimento suave */
+  transition: transform var(--transition-speed) ease,
+    width var(--transition-speed) ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-    padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  padding: 0 1.5rem;
 }
 
 .sidebar .logo h2 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin: 0;
-    margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  margin-left: 10px;
 }
 
 .sidebar .logo-icon {
-    font-size: 2rem;
-    color: var(--secondary-color); /* Dando destaque ao ícone */
+  font-size: 2rem;
+  color: var(--secondary-color); /* Dando destaque ao ícone */
 }
 
 /* Navegação */
 .main-nav {
-    flex-grow: 1; /* Ocupa o espaço restante */
-    padding: 0 1rem;
+  flex-grow: 1; /* Ocupa o espaço restante */
+  padding: 0 1rem;
 }
 
 .sidebar .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #e9ecef; /* Cor do texto um pouco mais suave */
-    text-decoration: none;
-    padding: 1rem 1.2rem;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #e9ecef; /* Cor do texto um pouco mais suave */
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
 }
 
 .sidebar .nav-item i {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 /* Efeito Hover e Item Ativo */
 .sidebar .nav-item:hover,
 .sidebar .nav-item.active {
-    background-color: var(--secondary-color); /* Usando o verde mais claro no hover/ativo */
-    color: white;
+  background-color: var(
+    --secondary-color
+  ); /* Usando o verde mais claro no hover/ativo */
+  color: white;
 }
 
 /* Item de Logout (Rodapé) */
 .logout-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #e9ecef;
-    text-decoration: none;
-    padding: 1rem 2.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 1rem;
-    transition: background-color var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #e9ecef;
+  text-decoration: none;
+  padding: 1rem 2.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .logout-item:hover {
-    background-color: #e74c3c; /* Um vermelho sutil para o logout */
+  background-color: #e74c3c; /* Um vermelho sutil para o logout */
 }
 
 /* 2. Conteúdo Principal e Topbar */
 .main-content-wrapper {
-    background-color: #f1f1f194;
-    margin-left: var(--sidebar-width); /* Empurra o conteúdo para a direita no desktop */
-    width: calc(100% - var(--sidebar-width));
-    transition: margin-left var(--transition-speed) ease, width var(--transition-speed) ease;
+  background-color: #f1f1f194;
+  margin-left: var(
+    --sidebar-width
+  ); /* Empurra o conteúdo para a direita no desktop */
+  width: calc(100% - var(--sidebar-width));
+  transition: margin-left var(--transition-speed) ease,
+    width var(--transition-speed) ease;
 }
 
 .topbar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: sticky; /* Fixo no topo */
-    top: 0;
-    z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: sticky; /* Fixo no topo */
+  top: 0;
+  z-index: 999;
 }
 
 .page-title {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-left: 20px;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 20px;
 }
 
 .content {
-    padding: 2rem;
+  padding: 2rem;
+  height: 86vh;
 }
 
 /* Hamburguer */
 .hamburger {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    cursor: pointer;
-    display: none; /* Oculto por padrão no desktop */
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none; /* Oculto por padrão no desktop */
 }
 
 /* Overlay (para mobile/tablet) */
 .sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 990;
-    display: none;
-    opacity: 0;
-    transition: opacity var(--transition-speed) ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 990;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
 }
 
- /* Dasshboard  */
+/* Dasshboard  */
 
 .topbar {
-    /* ... (Estilos existentes) ... */
-    justify-content: space-between; /* Ajusta para colocar o botão de ação na direita */
+  /* ... (Estilos existentes) ... */
+  justify-content: space-between; /* Ajusta para colocar o botão de ação na direita */
 }
 
 .page-title {
-    flex-grow: 1;
-    margin-left: 20px;
+  flex-grow: 1;
+  margin-left: 20px;
 }
 
 .btn-action {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    width: 450px;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background-color 0.3s;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  width: 450px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
 .btn-action:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
-
 
 /* ===== DASHBOARD LAYOUT (Desktop-First) ===== */
 
 .dashboard-layout {
-    display: grid;
-    /* Duas colunas: uma mais estreita para info (35%) e uma mais larga para gráficos (65%) */
-    grid-template-columns: 1fr 2fr; 
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  /* Duas colunas: uma mais estreita para info (35%) e uma mais larga para gráficos (65%) */
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Cards em Geral */
-.card-chart, .main-card, .data-card {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    padding: 20px;
-    margin-bottom: 20px; /* Espaçamento entre itens nas colunas */
+.card-chart,
+.main-card,
+.data-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px; /* Espaçamento entre itens nas colunas */
 }
 
 /* Card Principal de Temperatura */
 .current-temp {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #e6fffb; /* Fundo mais claro para destaque */
-    border-left: 5px solid var(--secondary-color);
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #e6fffb; /* Fundo mais claro para destaque */
+  border-left: 5px solid var(--secondary-color);
 }
 
 .freezer-status {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .temp-display {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--text-color);
-    line-height: 1;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1;
 }
 
 .unit {
-    font-size: 2rem;
-    vertical-align: top;
-    margin-left: 5px;
+  font-size: 2rem;
+  vertical-align: top;
+  margin-left: 5px;
 }
 
 .status-indicator {
-    padding: 5px 15px;
-    border-radius: 20px;
-    display: inline-block;
-    font-weight: 600;
-    margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .status-indicator.safe {
-    background-color: #d4edda;
-    color: #155724;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 /* Grid de Cards Menores */
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .data-card {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .data-card h4 {
-    margin-top: 5px;
-    color: var(--primary-color);
-    font-size: 1.1rem;
+  margin-top: 5px;
+  color: var(--primary-color);
+  font-size: 1.1rem;
 }
 
 .data-card i {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
-.icon-info { color: var(--secondary-color); }
-.icon-warning { color: #f39c12; }
+.icon-info {
+  color: var(--secondary-color);
+}
+.icon-warning {
+  color: #f39c12;
+}
 
 .full-width {
-    grid-column: 1 / -1; /* Ocupa toda a largura da coluna de informações */
+  grid-column: 1 / -1; /* Ocupa toda a largura da coluna de informações */
 }
 
 /* Estilos do Gráfico e Tabela */
-.chart-container h3, .data-table h3 {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    color: var(--text-color);
-    font-size: 1.2rem;
+.chart-container h3,
+.data-table h3 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-size: 1.2rem;
 }
 
 .data-table table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.data-table th, .data-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #f1f1f1;
+.data-table th,
+.data-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .data-table th {
-    background-color: #f7f7f7;
-    font-weight: 600;
-    color: #555;
+  background-color: #f7f7f7;
+  font-weight: 600;
+  color: #555;
 }
 
 .tag {
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .tag-normal {
-    background-color: #d4edda;
-    color: #155724;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .tag-alert {
-    background-color: #f8d7da;
-    color: #721c24;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 .chart-column {
-    /* Garante que o item na coluna de grid não estique indefinidamente */
-    min-width: 0; 
+  /* Garante que o item na coluna de grid não estique indefinidamente */
+  min-width: 0;
 }
 
 .chart-container {
-    /* Define uma altura fixa para o contêiner do gráfico */
-    height: 400px; /* Altura ideal para a maioria dos dashboards */
-    
-    /* Garante que o contêiner não cresça mais que o especificado, 
+  /* Define uma altura fixa para o contêiner do gráfico */
+  height: 400px; /* Altura ideal para a maioria dos dashboards */
+
+  /* Garante que o contêiner não cresça mais que o especificado, 
        mas se ajusta dentro da coluna */
-    max-height: 400px; 
-    
-    /* Adicione 'position: relative' para que o canvas preencha 
+  max-height: 400px;
+
+  /* Adicione 'position: relative' para que o canvas preencha 
        corretamente o container, se o Chart.js tiver problemas de renderização */
-    position: relative; 
+  position: relative;
 }
 
 /* Opcional: Garante que o canvas ocupe o espaço exato do contêiner */
 .chart-container canvas {
-    max-height: 100%;
-    max-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .freezer-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
-    z-index: 2000; /* Garante que fique acima de tudo */
-    display: none; /* Oculto por padrão */
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+  z-index: 2000; /* Garante que fique acima de tudo */
+  display: none; /* Oculto por padrão */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* Estado Ativo (visível) */
 .freezer-modal-overlay.active {
-    display: flex;
-    opacity: 1;
+  display: flex;
+  opacity: 1;
 }
 
 .freezer-modal {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 30px;
-    width: 90%;
-    max-width: 400px; /* Limite de largura para desktop */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px; /* Limite de largura para desktop */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
 }
 
 .freezer-modal-overlay.active .freezer-modal {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .modal-title {
-    color: var(--text-color);
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
 /* Opções de Freezer (Grid) */
 .freezer-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 15px;
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .freezer-item {
-    background-color: #f0f0f0;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    padding: 15px 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--text-color);
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 15px 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
 .freezer-icon {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
 }
 
 /* Efeito Hover e Seleção */
 .freezer-item:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .freezer-item.selected {
-    border-color: var(--primary-color);
-    background-color: #e6fffb;
-    font-weight: 700;
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+  border-color: var(--primary-color);
+  background-color: #e6fffb;
+  font-weight: 700;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
 }
 
 /* Ações (Confirmar/Cancelar) */
 .modal-actions {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 }
 
-.btn-confirm, .btn-cancel {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    width: 45%;
-    transition: background-color 0.2s;
+.btn-confirm,
+.btn-cancel {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 45%;
+  transition: background-color 0.2s;
 }
 
 .btn-confirm {
-    background-color: var(--secondary-color);
-    color: white;
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .btn-confirm:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .btn-cancel {
-    background-color: #ccc;
-    color: var(--text-color);
+  background-color: #ccc;
+  color: var(--text-color);
 }
 
 .btn-cancel:hover {
-    background-color: #bbb;
+  background-color: #bbb;
 }
 
 /* Relatórios */
 
 .relatorios-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Card Principal de Status (Relatórios) */
 .relatorio-status-card {
-    border-left: 5px solid var(--secondary-color);
-    padding: 20px;
+  border-left: 5px solid var(--secondary-color);
+  padding: 20px;
 }
 
 .freezer-status-relatorio {
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-color);
 }
 
 /* Container do Gráfico de Relatórios */
 .chart-container-relatorios {
-    height: 450px; /* Mais alto para gráfico semanal detalhado */
-    position: relative;
-    padding: 10px 0;
+  height: 450px; /* Mais alto para gráfico semanal detalhado */
+  position: relative;
+  padding: 10px 0;
 }
 
 /* Seção de Download */
 .download-section h3 {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    color: var(--text-color);
-    font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-size: 1.2rem;
 }
 
 .download-buttons-grid {
-    display: grid;
-    /* Coluna única em mobile, auto-fit em desktop */
-    grid-template-columns: 1fr; 
-    gap: 15px;
+  display: grid;
+  /* Coluna única em mobile, auto-fit em desktop */
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .btn-download {
-    background-color: #f0f0f0;
-    color: var(--primary-color);
-    border: 2px solid var(--secondary-color);
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  background-color: #f0f0f0;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .btn-download i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .btn-download:hover {
-    background-color: var(--secondary-color);
-    color: white;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Perfil */
+
+/* ===== LAYOUT PERFIL FINAL (Mantendo Sidebar) ===== */
+
+/* Garante o centralizador do card dentro da área de conteúdo */
+.perfil-layout-flex {
+  min-height: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha o card no topo do conteúdo */
+  padding: 30px 20px;
+}
+
+.perfil-form-container-final {
+  width: 100%;
+  max-width: 700px; /* Limita a largura máxima do formulário */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo do formulário */
+}
+
+/* O CARD PRINCIPAL */
+.perfil-card-final {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 40px 40px 40px; /* Padding ajustado para o layout interno */
+  width: 100%;
+  max-width: 650px; /* Largura ajustada para um bom tamanho em desktop */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Garante que a barra de progresso não vaze */
+}
+
+/* NOME E BARRA SUPERIOR */
+.user-info-final {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.progress-bar-final {
+  height: 15px; /* Altura da barra */
+  background-color: var(--primary-color); /* Verde escuro */
+  width: 100%;
+  margin: 0 -40px 15px -40px; /* Estende a barra para as bordas laterais do card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-name-final {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  padding-top: 10px; /* Espaço entre a barra e o nome */
+}
+
+/* FORMULÁRIO E INPUTS */
+.perfil-form-final {
+  /* Centraliza os elementos do formulário (inputs e botões) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.perfil-form-final .form-group-final {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 350px; /* Limita a largura dos inputs no centro */
+  text-align: center; /* Centraliza labels/placeholders */
+}
+
+.perfil-form-final label {
+  display: block;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.perfil-form-final input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--primary-color); /* Borda verde primária, conforme mockup */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Fundo cinza claro, conforme mockup */
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
+
+/* INPUT SOMENTE LEITURA */
+.perfil-form-final input[readonly] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* BOTÕES DE AÇÃO */
+.form-actions-final {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  max-width: 250px; /* Limita a largura dos botões no centro */
+}
+
+.btn-confirm-final,
+.btn-sair-final {
+  width: 100%;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-confirm-final {
+  background-color: var(--primary-color); /* Verde escuro */
+  color: white;
+}
+
+.btn-confirm-final:hover {
+  background-color: #31685a;
+}
+
+.btn-sair-final {
+  background-color: #d50f2d; /* Também verde escuro, conforme mockup */
+  color: white;
+}
+
+.btn-sair-final:hover {
+  background-color: #31685a;
+}
+
+/* FAQ */
+
+/* ===== LAYOUT DÚVIDAS FREQUENTES ===== */
+.duvidas-layout {
+  /* Ocupa a altura total do main-content */
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start;
+}
+
+.duvidas-card {
+  background-color: transparent; /* O fundo é o mesmo que o main content */
+  width: 100%;
+  max-width: 800px; /* Largura boa para desktop */
+}
+
+.duvidas-title {
+  /* Estilo do Título "Dúvidas Frequentes" na topbar já cobre isso */
+  display: none; /* O título já está no header, esconde este */
+}
+
+/* Container Principal do Acordeão */
+.accordion-container {
+  width: 100%;
+}
+
+/* Item Individual (Pergunta e Resposta) */
+.accordion-item {
+  background-color: var(--secondary-color); /* Verde escuro de fundo */
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden; /* Importante para o efeito de abrir/fechar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* Cabeçalho (Pergunta) */
+.accordion-header {
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efeito suave no hover */
+}
+
+/* Ícone de seta */
+.toggle-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotação do ícone quando ativo */
+.accordion-item.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Conteúdo (Resposta) */
+.accordion-content {
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo um pouco mais claro */
+  max-height: 0; /* Começa fechado */
+  transition: max-height 0.3s ease-out;
+  padding: 0 20px; /* Padding vertical zero quando fechado */
+  overflow: hidden;
+}
+
+.accordion-item.active .accordion-content {
+  /* Quando ativo, o maxHeight é definido pelo JS */
+  padding: 15px 20px;
+}
+
+.accordion-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #f0f0f0; /* Cor do texto da resposta */
+}
+
+.duvidas-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end; /* Alinha o botão à direita */
+  width: 100%;
+}
+
+.btn-adicionar-faq {
+  background-color: var(--primary-color); /* Verde claro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-adicionar-faq:hover {
+  background-color: #15a07f; /* Tom ligeiramente mais escuro */
+}
+
+/* ===== ESTILOS DO MODAL GERAL (Para Adicionar FAQ) ===== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Remover a opacidade e transição daqui. O display: flex/none será controlado pelo JS e .hidden */
+}
+
+/* CORREÇÃO CRUCIAL: Garante que o elemento desapareça completamente */
+.modal-overlay.hidden {
+  display: none !important; /* Força a remoção do fluxo da página, resolvendo o bloqueio de cliques */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 550px; /* AUMENTADO para um tamanho melhor, conforme sua solicitação */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Ajustes no Modal Header para o estilo do mockup */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: none; /* Removido para o visual do mockup */
+  /* Cor principal do modal (Verde claro/Primary Color) conforme o mockup */
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Botão 'X' de Fechar */
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: white; /* Cor branca para garantir visibilidade no header verde */
+  font-size: 1.5rem; /* Aumentado um pouco o tamanho do X */
+  cursor: pointer;
+  opacity: 1; /* Garante que não fique semi-transparente */
+  padding: 0;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 20px;
+  width: 90%;
+}
+
+.form-group-modal {
+  margin-bottom: 15px;
+}
+
+.form-group-modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group-modal input[type="text"],
+.form-group-modal textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end; /* Alinha o botão Confirmar à direita */
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Botão de Confirmação do Modal */
+.btn-confirm-modal {
+  background-color: var(--secondary-color); /* Verde escuro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-confirm-modal:hover {
+  background-color: #31685a;
+}
+
+/* ===== LAYOUT DE GERENCIAMENTO DE USUÁRIOS ===== */
+
+.user-management-layout {
+  display: flex;
+  gap: 30px; /* Espaço entre a tabela e o card */
+  padding: 20px;
+  align-items: flex-start; /* Alinha no topo */
+}
+
+/* 1. CONTAINER DA TABELA (ESQUERDA) */
+.user-table-container {
+  flex-grow: 1; /* Ocupa o espaço restante */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-table-container h2 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.table-actions {
+  width: 100px;
+  text-align: center;
+}
+
+.table-actions button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 0 5px;
+  transition: color 0.2s;
+  z-index: 1000 !important;
+}
+
+.table-actions .btn-delete-user {
+  color: #e74c3c;
+}
+
+.table-actions button:hover {
+  color: var(--secondary-color);
+}
+
+/* 2. CARD DE INFORMAÇÃO/EDIÇÃO (DIREITA) */
+.info-user-card {
+  width: 100%;
+  max-width: 300px; /* Largura fixa para o card de info */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.info-user-card.hidden {
+  display: none;
+}
+
+.info-user-card .card-header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.info-user-card .card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.info-user-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.avatar-user-placeholder {
+  font-size: 5rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.form-group-card {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group-card label {
+  display: block;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.form-group-card input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.form-actions-card {
+  margin-top: 25px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #31685a;
+}
+
+.btn-success {
+  background-color: var(--primary-color); /* Verde claro para o botão Salvar */
+}
+
+.btn-success:hover {
+  background-color: #15a07f;
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-        padding: 40px 25px;
-    }
-    h2 {
-        font-size: 18px;
-    }
+@media (max-width: 468px) {
+  .card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .login-card {
+    width: 90%;
+    padding: 40px 20px;
+  }
 
-        .login-card {
-        width: 90%;
-        padding: 40px 20px;
-    }
+  h2 {
+    font-size: 18px;
+  }
 
-    h2 {
-        font-size: 18px;
-    }
+  .freezer-modal {
+    padding: 20px;
+  }
+  .freezer-options {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); /* Mais flexível em telas pequenas */
+  }
 
-    .freezer-modal {
-        padding: 20px;
-    }
-    .freezer-options {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Mais flexível em telas pequenas */
-    }
+  .main-content-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1024px) {
-    
-    /* Layout Mobile: Empilha as colunas */
-    .dashboard-layout {
-        grid-template-columns: 1fr; /* Apenas uma coluna */
-        padding: 10px;
-    }
-    
-    /* Ajusta o cabeçalho para caber melhor */
-    .topbar {
-        padding: 0.8rem 1rem;
-    }
+  /* Layout Mobile: Empilha as colunas */
+  .dashboard-layout {
+    grid-template-columns: 1fr; /* Apenas uma coluna */
+    padding: 10px;
+  }
 
-    .page-title {
-        font-size: 1.3rem;
-    }
+  /* Ajusta o cabeçalho para caber melhor */
+  .topbar {
+    padding: 0.8rem 1rem;
+  }
 
-    .btn-action {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
+  .page-title {
+    font-size: 1.3rem;
+  }
 
-    /* Ajuste para o Card Principal */
-    .temp-display {
-        font-size: 3rem;
-    }
-    
-    /* Garante que os containers de gráfico sejam responsivos */
-    .chart-container {
-        height: 300px; /* Altura fixa para mobile */
-    }
+  .btn-action {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ajuste para o Card Principal */
+  .temp-display {
+    font-size: 3rem;
+  }
+
+  /* Garante que os containers de gráfico sejam responsivos */
+  .chart-container {
+    height: 300px; /* Altura fixa para mobile */
+  }
 }
-
 
 @media (max-width: 768px) {
   header {
@@ -862,5 +1408,22 @@ button:hover {
   main {
     margin-left: 0;
     padding-top: 4rem;
+  }
+
+  .perfil-card-minimal {
+    max-width: 90%; /* Mais estreito em mobile */
+    padding: 20px;
+  }
+
+  .user-management-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .user-table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite scroll horizontal na tabela */
+  }
+  .info-user-card {
+    max-width: 100%; /* Ocupa a largura total abaixo da tabela */
   }
 }

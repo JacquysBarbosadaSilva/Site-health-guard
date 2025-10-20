@@ -7,7 +7,6 @@
     <title>HealthGuard - Login</title>
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -22,12 +21,10 @@
 
             <form id="loginForm">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="seuemail@exemplo.com">
-
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="************">
-
-                <button class="button-login" type="submit">Login</button>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required> <label
+                    for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="************" required> <button
+                    class="button-login" type="submit">Login</button>
 
                 <a href="php/redefinir.php" class="esqueceu">Esqueceu a senha?</a>
             </form>
