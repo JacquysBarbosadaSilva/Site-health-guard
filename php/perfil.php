@@ -1,6 +1,4 @@
 <?php
-// Arquivo: php/perfil.php
-
 $title = "HealthGuard - Meu Perfil";
 $userName = "Admin User";
 $userEmail = "admin@healthguard.com";
@@ -20,15 +18,11 @@ $userEmail = "admin@healthguard.com";
 <body class="dashboard-page">
 
     <?php
-    // Inclui a sidebar
     include '../include/sidebar.php';
     ?>
 
     <div class="main-content-wrapper">
         <header class="topbar">
-            <button class="hamburger" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <h1 class="page-title">Meu Perfil</h1>
         </header>
 

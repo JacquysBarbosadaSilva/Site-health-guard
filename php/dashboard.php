@@ -1,5 +1,5 @@
 <?php
-$title = "HealthGuard - Dashboard"; // Define um título para a página
+$title = "HealthGuard - Dashboard"; 
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ $title = "HealthGuard - Dashboard"; // Define um título para a página
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="https://kit.fontawesome.com/a2e0e9a66b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/a2e0e9a66b.js" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
 
@@ -22,9 +22,6 @@ $title = "HealthGuard - Dashboard"; // Define um título para a página
 
     <div class="main-content-wrapper">
         <header class="topbar">
-            <button class="hamburger" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <h1 class="page-title">Gerenciamento de Temperatura</h1>
 
             <button class="btn-action">Mudar Freezer</button>

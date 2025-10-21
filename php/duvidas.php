@@ -1,7 +1,4 @@
 <?php
-// Arquivo: php/duvidas.php
-// Página de Dúvidas Frequentes com estrutura de Acordeão.
-
 $title = "HealthGuard - Dúvidas Frequentes";
 ?>
 
@@ -19,15 +16,11 @@ $title = "HealthGuard - Dúvidas Frequentes";
 <body class="dashboard-page">
 
     <?php
-    // Inclui a sidebar
     include '../include/sidebar.php';
     ?>
 
     <div class="main-content-wrapper">
         <header class="topbar">
-            <button class="hamburger" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <h1 class="page-title">Dúvidas Frequentes</h1>
         </header>
 
@@ -104,13 +97,11 @@ $title = "HealthGuard - Dúvidas Frequentes";
 
     <script src="../js/dashboard.js"></script>
     <script>
-        // Lógica do Acordeão (Accordion)
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
                 const item = header.parentElement;
                 const content = item.querySelector('.accordion-content');
 
-                // Fecha todos os outros itens
                 document.querySelectorAll('.accordion-item.active').forEach(activeItem => {
                     if (activeItem !== item) {
                         activeItem.classList.remove('active');
@@ -118,26 +109,15 @@ $title = "HealthGuard - Dúvidas Frequentes";
                     }
                 });
 
-                // Alterna o estado do item clicado
                 item.classList.toggle('active');
 
                 if (item.classList.contains('active')) {
-                    // Abre o conteúdo
                     content.style.maxHeight = content.scrollHeight + "px";
                 } else {
-                    // Fecha o conteúdo
                     content.style.maxHeight = null;
                 }
             });
         });
-
-        // Arquivo: php/duvidas.php (Dentro da tag <script> no final)
-
-        // ... (Lógica do Acordeão) ...
-
-        // ==========================================================
-        // LÓGICA DO MODAL DE ADICIONAR FAQ
-        // ==========================================================
         const btnAddFaq = document.getElementById('btnAddFaq');
         const modalOverlay = document.getElementById('addFaqModalOverlay');
         const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -146,20 +126,16 @@ $title = "HealthGuard - Dúvidas Frequentes";
 
         function openModal() {
             modalOverlay.classList.remove('hidden');
-            // Força o display: flex para centralizar
             modalOverlay.style.display = 'flex';
         }
 
         function closeModal() {
             modalOverlay.classList.add('hidden');
-            // Limpa o formulário ao fechar
             addFaqForm.reset();
         }
 
-        // Evento para abrir o modal
         btnAddFaq.addEventListener('click', openModal);
 
-        // Eventos para fechar o modal (Botão X e Clique no Overlay)
         modalCloseBtn.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) {
@@ -167,14 +143,12 @@ $title = "HealthGuard - Dúvidas Frequentes";
             }
         });
 
-        // Evento de Simulação de Envio do Formulário
         addFaqForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const titulo = document.getElementById('faqTitulo').value;
             const descricao = document.getElementById('faqDescricao').value;
 
-            // 1. Cria o novo item do Acordeão (Visual)
             const newItemHTML = `
         <div class="accordion-item new-item">
             <button class="accordion-header">
@@ -187,13 +161,9 @@ $title = "HealthGuard - Dúvidas Frequentes";
         </div>
     `;
 
-            // 2. Adiciona o novo item ao topo do container
             faqContainer.insertAdjacentHTML('afterbegin', newItemHTML);
-
-            // 3. Re-anexa o listener de clique para o novo item
             const newItem = faqContainer.querySelector('.new-item');
             if (newItem) {
-                // Encontra o novo cabeçalho e aplica o listener do acordeão
                 const newHeader = newItem.querySelector('.accordion-header');
                 newHeader.addEventListener('click', function () {
                     const item = this.parentElement;
@@ -215,11 +185,9 @@ $title = "HealthGuard - Dúvidas Frequentes";
                     }
                 });
 
-                // Remove a classe temporária
                 newItem.classList.remove('new-item');
             }
 
-            // 4. Feedback e Fechar Modal
             if (typeof Swal !== 'undefined') {
                 Swal.fire({
                     icon: "success",

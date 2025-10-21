@@ -2,34 +2,29 @@
 // 1. CÓDIGO DE LOGIN (Execute APENAS se o elemento existir)
 // ==========================================================
 
-// Arquivo: js/main.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
 
   if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
-      e.preventDefault(); // Impede o envio tradicional do formulário (recarregamento)
+      e.preventDefault(); 
 
       const email = document.getElementById("email").value;
       const senha = document.getElementById("senha").value;
-
-      // Cria um FormData para enviar os dados como POST
       const formData = new FormData();
       formData.append("email", email);
       formData.append("senha", senha);
 
       try {
-        // Requisição AJAX para o script PHP de processamento
         const response = await fetch("php/login_process.php", {
           method: "POST",
-          body: formData, // Envia os dados
+          body: formData, 
         });
 
         const data = await response.json();
 
         if (data.success) {
-          // Login BEM-SUCEDIDO
           Swal.fire({
             icon: "success",
             title: "Sucesso!",
@@ -37,11 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             timer: 1500,
             showConfirmButton: false,
           }).then(() => {
-            // Redireciona para o dashboard após o sucesso
             window.location.href = "php/dashboard.php";
           });
         } else {
-          // Login FALHOU
           Swal.fire({
             icon: "error",
             title: "Erro de Login",
@@ -109,12 +102,19 @@ const sidebar = document.getElementById("sidebar");
 const sidebarOverlay = document.getElementById("sidebar-overlay");
 const body = document.body;
 
+console.log("menuToggle:", menuToggle); 
+console.log("sidebar:", sidebar); 
+console.log("sidebarOverlay:", sidebarOverlay);
+
+console.log("Script principal carregado.");
+
 if (menuToggle && sidebar && sidebarOverlay) {
+  console.log("SUCCESS: Todos os elementos foram encontrados. O problema é o CSS.");
   function toggleSidebar() {
     const isActive = sidebar.classList.toggle("active");
     sidebarOverlay.classList.toggle("active", isActive);
 
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 768) {
       body.classList.toggle("menu-open", isActive);
     }
   }

@@ -1,9 +1,6 @@
 <?php
-// Arquivo: php/relatorios.php
-// Página de visualização de relatórios de temperatura.
-
 $title = "HealthGuard - Relatórios";
-$freezerAtual = 1; // Freezer padrão ao carregar a página
+$freezerAtual = 1;
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +27,6 @@ $freezerAtual = 1; // Freezer padrão ao carregar a página
 
     <div class="main-content-wrapper">
         <header class="topbar">
-            <button class="hamburger" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <h1 class="page-title">Relatórios</h1>
 
             <button class="btn-action">Mudar Freezer</button>
@@ -150,7 +144,6 @@ $freezerAtual = 1; // Freezer padrão ao carregar a página
                 let freezerId = 1;
                 const statusText = document.querySelector(".freezer-status-relatorio");
                 if (statusText) {
-                    // Tenta extrair o número do freezer do texto atual
                     const match = statusText.textContent.match(/Freezer (\d+)/);
                     if (match && match[1]) {
                         freezerId = match[1];

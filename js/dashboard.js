@@ -1,6 +1,3 @@
-// Arquivo: js/dashboard.js
-// Contém a lógica de navegação da Sidebar e a funcionalidade do Modal de Freezer (AJAX).
-
 document.addEventListener("DOMContentLoaded", function () {
   // ==========================================================
   // 1. CÓDIGO DA SIDEBAR (Hamburguer)
@@ -15,13 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const isActive = sidebar.classList.toggle("active");
       sidebarOverlay.classList.toggle("active", isActive);
 
-      // Adiciona/Remove classe para evitar rolagem em mobile
       if (window.innerWidth <= 1024) {
         body.classList.toggle("menu-open", isActive);
       }
     }
 
-    // Event Listeners da Sidebar
     menuToggle.addEventListener("click", toggleSidebar);
     sidebarOverlay.addEventListener("click", toggleSidebar);
 
@@ -38,9 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 2. FUNÇÃO PARA ATUALIZAR O DASHBOARD (Após requisição AJAX)
   // ==========================================================
 
-  // Função responsável por pegar o JSON e injetar os dados no HTML/Gráfico
   function updateDashboard(data) {
-    // Detecta a página atual: se o elemento de status de relatórios existir
     const isRelatoriosPage = document.querySelector(
       ".freezer-status-relatorio"
     );
@@ -71,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // LÓGICA PARA A PÁGINA DE DASHBOARD (Gerenciamento)
       // ==========================================================
 
-      // 1. Atualizar o Card Principal (Temperatura Atual)
       const freezerStatusText = document.querySelector(".freezer-status");
       const tempDisplay = document.querySelector(".temp-display");
       const statusIndicator = document.querySelector(".status-indicator");
@@ -89,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         statusIndicator.className = `status-indicator ${statusClass}`;
       }
 
-      // 2. Atualizar Cards de Últimas Leituras
       const card24h_max = document.querySelector(
         ".data-card:nth-child(1) p:nth-child(2)"
       );
@@ -102,14 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
         card24h_min.textContent = `Mínima: ${data.last_24h.min}°C`;
       }
 
-      // 3. ATUALIZAR GRÁFICO 24H
       if (window.tempChart24h && data.chart_data) {
         window.tempChart24h.data.datasets[0].data = data.chart_data.temps;
         window.tempChart24h.data.labels = data.chart_data.labels;
         window.tempChart24h.update();
       }
 
-      // 4. ATUALIZAR TABELA (Simplificado)
       const tableBody = document.querySelector(".data-table tbody");
       const tagClass =
         data.status.toLowerCase() === "alerta" ? "tag-alert" : "tag-normal";
@@ -148,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleFreezerModal(show) {
       if (show) {
         freezerModalOverlay.classList.add("active");
-        // Remove a seleção anterior ao abrir
         freezerItems.forEach((item) => item.classList.remove("selected"));
         selectedFreezerId = null;
       } else {
@@ -156,12 +144,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // 3.1 Abre o modal
     btnMudarFreezer.addEventListener("click", () => {
       toggleFreezerModal(true);
     });
 
-    // 3.2 Fecha ao Cancelar ou clicar no Overlay
     btnCancel.addEventListener("click", () => {
       toggleFreezerModal(false);
     });
@@ -172,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 3.3 Gerencia a seleção dos freezers
     freezerItems.forEach((item) => {
       item.addEventListener("click", () => {
         freezerItems.forEach((i) => i.classList.remove("selected"));
@@ -181,11 +166,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // 3.4 Ação de Confirmação (AJAX Fetch)
     btnConfirm.addEventListener("click", async () => {
       if (selectedFreezerId) {
         try {
-          // Endpoint (get_freezer_data.php) no mesmo diretório do PHP que carrega a página (dashboard.php ou relatorios.php)
           const response = await fetch("get_freezer_data.php", {
             method: "POST",
             headers: {
@@ -201,11 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           const data = await response.json();
-
-          // Chama a função para atualizar a interface
           updateDashboard(data);
 
-          // Feedback visual de sucesso (SweetAlert)
           if (typeof Swal !== "undefined") {
             Swal.fire({
               icon: "success",
