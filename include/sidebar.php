@@ -5,7 +5,7 @@
 <aside class="sidebar" id="sidebar">
     <div class="logo">
         <i class="fas fa-heartbeat logo-icon"></i>
-        <img class="logo-sidebar" src="../img/logo.png" alt="">
+        <img class="logo-sidebar" src="../img/logo-branco.png" alt="">
     </div>
 
     <nav class="main-nav">
@@ -16,7 +16,7 @@
         <a href="../php/gerenciar_usuarios.php" class="nav-item "><i class="fas fa-users-cog"></i> Gerenciar Usuários</a>
     </nav>
 
-    <a href="../index.php" class="logout-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+    <a href="../index.php" class="nav-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
 </aside>
 
 

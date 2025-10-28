@@ -9,7 +9,7 @@
 <body class="rd-page">
     <div class="rd-container">
         <div class="rd-card">
-            <h1 class="rd-logo">HealthGuard</h1>
+            <img class="logo-login" src="../img/logo.png" alt="">
 
             <!-- Etapa 1 -->
             <div class="step active" id="step1">
@@ -18,6 +18,8 @@
                 <input type="email" id="email" placeholder="seuemail@exemplo.com">
                 <p class="info">Insira seu e-mail para receber um código para redefinir sua senha.</p>
                 <button onclick="nextStep(2)">Enviar código</button>
+                <a class="voltar" href="../index.php">← Voltar</a>
+
             </div>
 
             <!-- Etapa 2 -->

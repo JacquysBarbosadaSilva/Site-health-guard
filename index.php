@@ -14,7 +14,7 @@
     <div class="container">
         <div class="login-card">
             <div class="logo">
-                <h1>HealthGuard</h1>
+                <img class="logo-login" src="./img/logo.png" alt="">
             </div>
 
             <h2>Entre na sua conta</h2>
